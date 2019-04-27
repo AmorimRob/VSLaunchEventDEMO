@@ -1,4 +1,5 @@
 ﻿using App1.Models;
+using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace App1.ViewModels
         public DetalhesPedidosPageViewModel(Pedido pedido)
         {
             PedidoSelecionado = pedido;
+            Analytics.TrackEvent("Pegou detalhes do pedido");
         }
     }
 }
